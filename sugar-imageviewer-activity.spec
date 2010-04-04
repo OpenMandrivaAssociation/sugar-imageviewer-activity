@@ -11,10 +11,10 @@ Url: http://sugarlabs.org/
 
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/ImageViewer/ImageViewer-14.tar.bz2
 
-Requires: sugar-toolkit >= 0.86.1
+Requires: sugar-toolkit >= 0.88.0
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.86.0
+BuildRequires: sugar-toolkit >= 0.88.0
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
