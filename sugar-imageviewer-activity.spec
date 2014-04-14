@@ -2,19 +2,19 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-imageviewer-activity
-Version: 14
-Release: %mkrel 1
+Version: 59
+Release: 1
 Summary: Image viewer activity for Sugar
 License: GPL
 Group: Graphical desktop/Other
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/fructose/ImageViewer/ImageViewer-14.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/fructose/ImageViewer/ImageViewer-%{version}.tar.bz2
 
-Requires: sugar-toolkit >= 0.86.1
+Requires: sugar-toolkit-gtk3 >= 0.86.1
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.86.0
+BuildRequires: sugar-toolkit-gtk3 >= 0.86.0
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -23,7 +23,7 @@ BuildArch: noarch
 Image viewer activity for Sugar.
 
 %prep
-%setup -q -n ImageViewer-14
+%setup -q -n ImageViewer-%{version}
 
 
 %build
