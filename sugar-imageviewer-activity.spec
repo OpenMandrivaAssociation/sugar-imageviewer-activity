@@ -2,8 +2,8 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-imageviewer-activity
-Version: 59
-Release: 2
+Version: 62
+Release: 1
 Summary: Image viewer activity for Sugar
 License: GPL
 Group: Graphical desktop/Other
@@ -16,7 +16,6 @@ Requires: sugar-toolkit-gtk3 >= 0.86.1
 BuildRequires: gettext  
 BuildRequires: sugar-toolkit-gtk3 >= 0.86.0
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 %description
@@ -29,19 +28,14 @@ Image viewer activity for Sugar.
 %build
 
 rm -f MANIFEST
-python setup.py build
+python2 setup.py build
 
 %install
-rm -rf %{buildroot}
-python setup.py install --prefix=%{buildroot}/%{_prefix}
+python2 setup.py install --prefix=%{buildroot}/%{_prefix}
 find %{buildroot} -name '*.py.orig' -print0 | xargs -0 rm -f
 %find_lang org.laptop.ImageViewerActivity
 
-%clean
-rm -rf %{buildroot}
-
 %files -f org.laptop.ImageViewerActivity.lang
-%defattr(-,root,root,-)
 %{_datadir}/sugar/activities/*
 %doc AUTHORS COPYING NEWS
 
