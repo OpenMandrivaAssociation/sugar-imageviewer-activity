@@ -7,7 +7,7 @@ Release: 1
 Summary: Image viewer activity for Sugar
 License: GPL
 Group: Graphical desktop/Other
-Url: http://sugarlabs.org/
+Url: https://sugarlabs.org/
 
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/ImageViewer/ImageViewer-%{version}.tar.bz2
 
